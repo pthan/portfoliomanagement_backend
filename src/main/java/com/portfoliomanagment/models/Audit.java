@@ -33,6 +33,7 @@ public class Audit {
    // private Instrument instrument;
 //    @OneToMany(mappedBy = "department", cascade = CascadeType.ALL)
 //    private List<Audit> employees = new ArrayList<>();
+  //  @Column(name="")
 
     @Column(name="price",nullable = false)
     private  int price;
