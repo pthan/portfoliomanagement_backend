@@ -13,7 +13,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class item {
+public class Item {
 
     @Id
     @Column(name="item_id")

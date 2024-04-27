@@ -1,60 +1,41 @@
 package com.portfoliomanagment.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.math.BigDecimal;
 
 @Entity
-@Table(name = "portfolio")
+@Table(name="portfolio")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Portfolio {
-	
-	public enum InvestStrategyType {
-		Safe, Moderate, Risky
-	}
+    @Id
+    @Column(name="portfolio_number")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer portfolioNumber;
 
-	private int id;
-	private String portfolioNo;
-	private String portfolioValue;
-	private String currentPerformance;
-	private InvestStrategyType investmentStrategy;
+//    @Column(name="customer_id", nullable = false)
+//    private Integer customerId;
 
-	public int getId() {
-		return id;
-	}
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    @Enumerated(EnumType.ORDINAL)
+    @Column(name="investment_strategy")
+    private InvestmentStrategy investmentStrategy;
 
-	public String getPortfolioNo() {
-		return portfolioNo;
-	}
+    //    private BigDecimal portfolioValue;
+//    public BigDecimal getPortfolioValue() {
+//        return new BigDecimal(0);
+//    }
 
-	public void setPortfolioNo(String portfolioNo) {
-		this.portfolioNo = portfolioNo;
-	}
-
-	public String getPortfolioValue() {
-		return portfolioValue;
-	}
-
-	public void setPortfolioValue(String portfolioValue) {
-		this.portfolioValue = portfolioValue;
-	}
-
-	public String getCurrentPerformance() {
-		return currentPerformance;
-	}
-
-	public void setCurrentPerformance(String currentPerformance) {
-		this.currentPerformance = currentPerformance;
-	}
-
-	public InvestStrategyType getInvestmentStrategy() {
-		return investmentStrategy;
-	}
-
-	public void setInvestmentStrategy(InvestStrategyType investmentStrategy) {
-		this.investmentStrategy = investmentStrategy;
-	}
-
+    //    private double currentPerformance;
+//    public double getCurrentPerformance() {
+//        return 0;
+//    }
 }

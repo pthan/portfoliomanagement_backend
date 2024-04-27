@@ -2,14 +2,14 @@
 package com.portfoliomanagment.service;
 
 
-import com.portfoliomanagment.models.item;
+import com.portfoliomanagment.models.Item;
 
 import java.util.List;
 
 public interface itemservice {
-       public  List<item> getAllItems();
+       public  List<Item> getAllItems();
 
-       public item saveItem(item itemData);
+       public Item saveItem(Item itemData);
 
-       public  item findByItemId(Long itemid);
+       public Item findByItemId(Long itemid);
 }
