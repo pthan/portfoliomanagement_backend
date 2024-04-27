@@ -1,4 +1,4 @@
-package com.portfoliomanagment.spring.login.security.jwt;
+package com.portfoliomanagment.security.jwt;
 
 import java.io.IOException;
 import java.util.HashMap;

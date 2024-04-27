@@ -1,4 +1,4 @@
-package com.portfoliomanagment.spring.login.models;
+package com.portfoliomanagment.models;
 
 public enum ERole {
   ROLE_CUSTOMER,

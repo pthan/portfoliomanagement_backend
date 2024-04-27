@@ -1,4 +1,4 @@
-package com.portfoliomanagment.spring.login.models;
+package com.portfoliomanagment.models;
 
 import java.util.HashSet;
 import java.util.Set;

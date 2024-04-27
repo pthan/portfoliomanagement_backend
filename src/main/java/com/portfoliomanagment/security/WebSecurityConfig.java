@@ -1,7 +1,7 @@
-package com.portfoliomanagment.spring.login.security;
+package com.portfoliomanagment.security;
 
-import com.portfoliomanagment.spring.login.security.jwt.AuthEntryPointJwt;
-import com.portfoliomanagment.spring.login.security.jwt.AuthTokenFilter;
+import com.portfoliomanagment.security.jwt.AuthEntryPointJwt;
+import com.portfoliomanagment.security.jwt.AuthTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +19,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.portfoliomanagment.spring.login.security.services.UserDetailsServiceImpl;
+import com.portfoliomanagment.security.services.UserDetailsServiceImpl;
 
 @Configuration
 //@EnableWebSecurity

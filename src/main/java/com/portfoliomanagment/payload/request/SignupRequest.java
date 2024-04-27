@@ -1,4 +1,4 @@
-package com.portfoliomanagment.spring.login.payload.request;
+package com.portfoliomanagment.payload.request;
 
 import java.util.Set;
 

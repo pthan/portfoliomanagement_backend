@@ -1,6 +1,6 @@
-package com.portfoliomanagment.spring.login.security.services;
+package com.portfoliomanagment.security.services;
 
-import com.portfoliomanagment.spring.login.repository.UserRepository;
+import com.portfoliomanagment.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -8,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.portfoliomanagment.spring.login.models.User;
+import com.portfoliomanagment.models.User;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

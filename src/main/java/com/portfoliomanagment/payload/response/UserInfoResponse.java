@@ -1,4 +1,4 @@
-package com.portfoliomanagment.spring.login.payload.response;
+package com.portfoliomanagment.payload.response;
 
 import java.util.List;
 

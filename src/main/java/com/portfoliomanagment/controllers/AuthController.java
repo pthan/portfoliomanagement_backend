@@ -1,11 +1,21 @@
-package com.portfoliomanagment.spring.login.controllers;
+package com.portfoliomanagment.controllers;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.portfoliomanagment.spring.login.payload.request.SignupRequest;
+import com.portfoliomanagment.models.ERole;
+import com.portfoliomanagment.models.Role;
+import com.portfoliomanagment.models.User;
+import com.portfoliomanagment.payload.request.LoginRequest;
+import com.portfoliomanagment.payload.request.SignupRequest;
+import com.portfoliomanagment.payload.response.MessageResponse;
+import com.portfoliomanagment.payload.response.UserInfoResponse;
+import com.portfoliomanagment.repository.RoleRepository;
+import com.portfoliomanagment.repository.UserRepository;
+import com.portfoliomanagment.security.jwt.JwtUtils;
+import com.portfoliomanagment.security.services.UserDetailsImpl;
 import jakarta.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,17 +32,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.portfoliomanagment.spring.login.models.ERole;
-import com.portfoliomanagment.spring.login.models.Role;
-import com.portfoliomanagment.spring.login.models.User;
-import com.portfoliomanagment.spring.login.payload.request.LoginRequest;
-import com.portfoliomanagment.spring.login.payload.response.UserInfoResponse;
-import com.portfoliomanagment.spring.login.payload.response.MessageResponse;
-import com.portfoliomanagment.spring.login.repository.RoleRepository;
-import com.portfoliomanagment.spring.login.repository.UserRepository;
-import com.portfoliomanagment.spring.login.security.jwt.JwtUtils;
-import com.portfoliomanagment.spring.login.security.services.UserDetailsImpl;
 
 //for Angular Client (withCredentials)
 //@CrossOrigin(origins = "http://localhost:8081", maxAge = 3600, allowCredentials="true")
